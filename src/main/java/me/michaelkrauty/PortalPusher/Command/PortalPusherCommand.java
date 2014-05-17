@@ -1,6 +1,7 @@
 package me.michaelkrauty.PortalPusher.Command;
 
 import me.michaelkrauty.PortalPusher.Main;
+import me.michaelkrauty.PortalPusher.Util.Format;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -28,7 +29,7 @@ public class PortalPusherCommand implements CommandExecutor {
 
 
 		if (args.length < 1) {
-			player.sendMessage("&8Unknown command! Use \"/pp help\" for help!");
+			player.sendMessage(Format.format("&8Unknown command! Use \"/pp help\" for help!"));
 			return true;
 		}
 

@@ -5,7 +5,7 @@ package me.michaelkrauty.PortalPusher.Util;
  */
 public class Format {
 
-	public String format(String in) {
+	public static String format(String in) {
 		return in.replace("&0", "§0")
 				.replace("&1", "§1")
 				.replace("&2", "§2")

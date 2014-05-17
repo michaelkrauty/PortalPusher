@@ -8,23 +8,23 @@ public class Help {
 		// TODO Auto-generated constructor stub
 		try {
 			if (args.length == 0) {
-				for (int i = 0; i < getHelp(1).length; i++) {
-					player.sendMessage(getHelp(1)[i]);
+				for (String line : getHelp(1)) {
+					player.sendMessage(line);
 				}
 			} else {
 				if (args.length == 1) {
-					for (int i = 0; i < getHelp(1).length; i++) {
-						player.sendMessage(getHelp(1)[i]);
+					for (String line : getHelp(1)) {
+						player.sendMessage(line);
 					}
 				} else {
-					for (int i = 0; i < getHelp(Integer.parseInt(args[1])).length; i++) {
-						player.sendMessage(getHelp(Integer.parseInt(args[1]))[i]);
+					for (String line : getHelp(Integer.parseInt(args[1]))) {
+						player.sendMessage(line);
 					}
 				}
 			}
 		} catch (Exception e) {
-			for (int i = 0; i < getHelp(-1).length; i++) {
-				player.sendMessage(getHelp(-1)[i]);
+			for (String line : getHelp(-1)) {
+				player.sendMessage(line);
 			}
 		}
 	}

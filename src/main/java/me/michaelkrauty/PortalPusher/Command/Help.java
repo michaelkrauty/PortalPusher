@@ -37,7 +37,7 @@ public class Help {
 					"put whatever here"
 			};
 		}
-		if (page > 1 || page == -1) {
+		if (page > 2 || page == -1) {
 			return new String[]{
 					"Unknown help page!"
 			};

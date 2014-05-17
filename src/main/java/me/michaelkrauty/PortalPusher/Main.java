@@ -5,6 +5,7 @@ import java.util.logging.Logger;
 import me.michaelkrauty.PortalPusher.Command.*;
 
 import me.michaelkrauty.PortalPusher.Listener.BlockListener;
+import me.michaelkrauty.PortalPusher.Listener.PlayerListener;
 import org.bukkit.Server;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -20,12 +21,12 @@ public class Main extends JavaPlugin implements Listener {
 	private Server server = this.getServer();
 	public static Main main;
 
-	private final BlockListener blockListener = new BlockListener(this);
 
 	public void onEnable() {
 		main = this;
 		getCommand("portalpusher").setExecutor(new PortalPusherCommand(this));
 		PluginManager pm = getServer().getPluginManager();
-		pm.registerEvents(blockListener, this);
+		pm.registerEvents(new BlockListener(this), this);
+		pm.registerEvents(new PlayerListener(this), this);
 	}
 }

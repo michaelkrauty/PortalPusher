@@ -29,7 +29,7 @@ public class PortalPusherCommand implements CommandExecutor {
 
 
 		if (args.length < 1) {
-			player.sendMessage(Format.format("&8Unknown command! Use \"/pp help\" for help!"));
+			player.sendMessage(Format.format("&7Unknown command! Use \"/pp help\" for help!"));
 			return true;
 		}
 

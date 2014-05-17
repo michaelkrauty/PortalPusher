@@ -1,6 +1,9 @@
 package me.michaelkrauty.PortalPusher.Command;
 
+import me.michaelkrauty.PortalPusher.Util.Format;
 import org.bukkit.entity.Player;
+
+import java.text.Normalizer;
 
 public class Help {
 
@@ -9,22 +12,22 @@ public class Help {
 		try {
 			if (args.length == 0) {
 				for (String line : getHelp(1)) {
-					player.sendMessage(line);
+					player.sendMessage(Format.format(line));
 				}
 			} else {
 				if (args.length == 1) {
 					for (String line : getHelp(1)) {
-						player.sendMessage(line);
+						player.sendMessage(Format.format(line));
 					}
 				} else {
 					for (String line : getHelp(Integer.parseInt(args[1]))) {
-						player.sendMessage(line);
+						player.sendMessage(Format.format(line));
 					}
 				}
 			}
 		} catch (Exception e) {
 			for (String line : getHelp(-1)) {
-				player.sendMessage(line);
+				player.sendMessage(Format.format(line));
 			}
 		}
 	}
@@ -33,13 +36,13 @@ public class Help {
 		int pages = 1;
 		if (page == 1) {
 			return new String[]{
-					"help page 1",
-					"etc etc edit this later"
+					"&7help page 1",
+					"&7etc etc edit this later"
 			};
 		}
 		if (page > pages || page == -1) {
 			return new String[]{
-					"Unknown help page!"
+					"&7Unknown help page!"
 			};
 		}
 		return null;

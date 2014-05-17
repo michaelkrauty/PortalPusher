@@ -1,0 +1,7 @@
+name: PortalPusher
+version: 1.0
+author: michaelkrauty
+main: me.michaelkrauty.PortalPusher.Main
+commands:
+  portalpusher:
+    aliases: [portalpusher, pp]

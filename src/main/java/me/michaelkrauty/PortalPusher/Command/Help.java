@@ -13,7 +13,7 @@ public class Help {
 		} else {
 			try {
 				for (int i = 0; i < getHelp(1).length; i++) {
-					player.sendMessage(getHelp(Integer.parseInt(args[2]))[i]);
+					player.sendMessage(getHelp(Integer.parseInt(args[1]))[i]);
 				}
 			} catch (Exception e) {
 				for (int i = 0; i < getHelp(-1).length; i++) {

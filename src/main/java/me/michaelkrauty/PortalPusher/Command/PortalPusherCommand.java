@@ -21,7 +21,7 @@ public class PortalPusherCommand implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
 		if (!(sender instanceof Player)) {
 			log.info("Silly console, you can't run PortalPusher commands");
-			return false;
+			return true;
 		}
 
 		Player player = (Player) sender;
@@ -29,10 +29,15 @@ public class PortalPusherCommand implements CommandExecutor {
 
 		if (args.length < 1) {
 			new Help(player, args);
-			return false;
+			return true;
+		}
+
+		if (args[0].equalsIgnoreCase("help")) {
+			new Help(player, args);
+			return true;
 		}
 
 
-		return false;
+		return true;
 	}
 }

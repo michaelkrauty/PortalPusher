@@ -7,8 +7,14 @@ public class Help {
 	public Help(Player player, String[] args) {
 		// TODO Auto-generated constructor stub
 		try {
-			for (int i = 0; i < getHelp(Integer.parseInt(args[1])).length; i++) {
-				player.sendMessage(getHelp(Integer.parseInt(args[1]))[i]);
+			if (args.length == 0) {
+				for (int i = 0; i < getHelp(1).length; i++) {
+					player.sendMessage(getHelp(1)[i]);
+				}
+			} else {
+				for (int i = 0; i < getHelp(Integer.parseInt(args[1])).length; i++) {
+					player.sendMessage(getHelp(Integer.parseInt(args[1]))[i]);
+				}
 			}
 		} catch (Exception e) {
 			for (int i = 0; i < getHelp(-1).length; i++) {

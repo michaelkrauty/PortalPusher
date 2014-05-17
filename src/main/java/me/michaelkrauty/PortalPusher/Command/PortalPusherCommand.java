@@ -23,10 +23,16 @@ public class PortalPusherCommand implements CommandExecutor {
 			log.info("Silly console, you can't run PortalPusher commands");
 			return false;
 		}
-		if(args.length < 1) {
-			new Help();
+
+		Player player = (Player) sender;
+
+
+		if (args.length < 1) {
+			new Help(player, args);
 			return false;
 		}
+
+
 		return false;
 	}
 }

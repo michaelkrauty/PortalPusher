@@ -31,6 +31,12 @@ public class Help {
 					"etc"
 			};
 		}
+		if (page == 2) {
+			return new String[] {
+					"page 2 of help",
+					"put whatever here"
+			};
+		}
 		if (page > 1 || page == -1) {
 			return new String[]{
 					"Unknown help page!"

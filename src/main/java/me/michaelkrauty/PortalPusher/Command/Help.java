@@ -12,8 +12,14 @@ public class Help {
 					player.sendMessage(getHelp(1)[i]);
 				}
 			} else {
-				for (int i = 0; i < getHelp(Integer.parseInt(args[1])).length; i++) {
-					player.sendMessage(getHelp(Integer.parseInt(args[1]))[i]);
+				if (args.length == 1) {
+					for (int i = 0; i < getHelp(1).length; i++) {
+						player.sendMessage(getHelp(1)[i]);
+					}
+				} else {
+					for (int i = 0; i < getHelp(Integer.parseInt(args[1])).length; i++) {
+						player.sendMessage(getHelp(Integer.parseInt(args[1]))[i]);
+					}
 				}
 			}
 		} catch (Exception e) {

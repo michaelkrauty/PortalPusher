@@ -30,20 +30,14 @@ public class Help {
 	}
 
 	private String[] getHelp(int page) {
+		int pages = 1;
 		if (page == 1) {
 			return new String[]{
-					"help line 1",
-					"help line 2",
-					"etc"
+					"help page 1",
+					"etc etc edit this later"
 			};
 		}
-		if (page == 2) {
-			return new String[] {
-					"page 2 of help",
-					"put whatever here"
-			};
-		}
-		if (page > 2 || page == -1) {
+		if (page > pages || page == -1) {
 			return new String[]{
 					"Unknown help page!"
 			};
